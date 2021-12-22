@@ -1,6 +1,7 @@
 function onPageLoaded() {
   const input = document.querySelector("#new_list");
   const ul = document.querySelector("ul.todos");
+  const addTodo = document.querySelector("button.addTodo");
   const saveButton = document.querySelector("button.save");
   const clearButton = document.querySelector("button.clear");
   const showTipsButton = document.querySelector("button.showTips");
@@ -9,6 +10,7 @@ function onPageLoaded() {
   const pensil = document.querySelector("#pensil");
   const title = document.querySelector(".title_main");
   const newTitle = document.querySelector("#new_title");
+  const header = document.querySelector(".title");
 
   saveButton.addEventListener("click", () => {
     localStorage.setItem("todos", ul.innerHTML);
@@ -47,6 +49,8 @@ function onPageLoaded() {
     localStorage.getItem("title", title.innerText);
     localStorage.setItem("todos", ul.innerHTML);
   }
+  console.log(addTodo);
+  addTodo.addEventListener("click", () => createTodo());
 
   function listenerDeleteTodo(element) {
     element.addEventListener("click", (event) => {
@@ -100,6 +104,7 @@ function onPageLoaded() {
       newTitle.classList.toggle("hide");
       newTitle.value = title.innerText;
     });
+
     newTitle.addEventListener("keypress", (e) => {
       let keyEnter2 = 13;
       if (e.which === keyEnter2) {
