@@ -1,0 +1,133 @@
+.checked {
+  text-decoration: line-through;
+}
+
+body {
+  background-color: rgb(200, 238, 205);
+}
+
+#todo,
+#overlay {
+  width: 500px;
+  margin: 0 auto;
+}
+
+#todo {
+  box-sizing: border-box;
+  background-image: url("./paper_grid_PNG5461.png");
+  background-repeat: repeat;
+}
+
+#overlay {
+  background-color: rgb(255, 241, 181);
+}
+
+#new_list {
+  width: 91%;
+  height: 30px;
+  margin: 20px;
+}
+
+input[type="text"]::placeholder {
+  color: rgb(195, 195, 195);
+}
+
+#new_title {
+  width: 200px;
+  height: 30px;
+  margin: 23px 0px;
+  padding: 0px 13px;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.title {
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+#pensil {
+  font-size: 30px;
+  padding: 0px 10px;
+}
+
+.todos {
+  list-style: none;
+  font-size: 20px;
+  padding: 0px 20px;
+  margin: 0;
+}
+
+.todo_li {
+  padding: 10px 0px;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-weight: bold;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  /* Убираем маркеры у списка */
+}
+
+.todo-text {
+  width: 100%;
+}
+
+.todo_li p {
+  margin: 0 5px;
+  list-style-type: none;
+}
+
+.todo_li p:before {
+  content: "- ";
+  /* Добавляем в качестве маркера символ */
+}
+
+.todo-trash {
+  font-size: 16px;
+  padding-top: 1px;
+}
+
+#buttons {
+  padding: 20px;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+}
+
+#overlay {
+  padding: 20px 0;
+}
+
+.closeTips {
+  padding-left: 22px;
+  font-size: 30px;
+  text-decoration: none;
+  color: red;
+  font-weight: bold;
+}
+
+.tips {
+  padding: 10px;
+}
+
+.tips > li {
+  list-style-type: none;
+}
+
+.tips > li:before {
+  content: "- ";
+  width: 100%;
+  padding: 0px 5px;
+  /* Добавляем в качестве маркера символ */
+}
